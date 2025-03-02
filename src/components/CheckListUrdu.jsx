@@ -1,29 +1,29 @@
 import React, { useState, useEffect } from "react";
 
 const tasks = [
-  "Have I prayed Tahajjud today?",
-  "Have I recited the Holy Qur'an today?",
-  "Have I offered 5 times prayer today?",
-  "Have I offered my Nafl prayers today?",
-  "Have I helped someone in need today?",
-  "Have I reflected on the Qur'an today?",
-  "Have I avoided backbiting today?",
-  "Have I made any new intention for good deeds today?",
-  "Have I sought forgiveness from Allah today?",
-  "Have I done something beneficial for my family today?",
-  "Have I fasted today?",
-  "Have I avoided sins today?",
-  "Have I recited today's adhkaar?",
-  "Have I given charity today?",
-  "Have I remembered death today?",
-  "Have I reflected on the afterlife today?",
-  "Have I lowered my gaze today?",
-  "Have I spoken kind words today?",
-  "Have I helped someone who asked for help today?",
-  "Have I made someone smile today?",
+  "کیا آج میں نے تہجد ادا کی؟",
+  "کیا آج میں نے قرآن پاک کی تلاوت کی؟",
+  "کیا آج میں نے پانچوں وقت کی نماز ادا کی؟",
+  "کیا آج میں نے نفل نماز ادا کی؟",
+  "کیا آج میں نے کسی کی مدد کی؟",
+  "کیا آج میں نے قرآن مجید پر غور و تدبر کیا؟",
+  "کیا آج میں نے غیبت سے خود کو بچایا؟",
+  "کیا آج میں نے کسی نیک عمل کا ارادہ کیا؟",
+  "کیا آج میں نے اللہ سبحانہ وتعالیٰ سے مغفرت طلب کی؟",
+  "کیا آج میں نے اپنے گھر والوں کے لیے کوئی فائدہ بخش کام کیا؟",
+  "کیا آج میں نے روزہ رکھا؟",
+  "کیا آج میں نے گناہوں سے بچنے کی کوشش کی؟",
+  "کیا آج میں نے کوئی تسبیح پڑھی؟ (یا آج کے دن کے اذکار پڑھے)",
+  "کیا آج میں نے صدقہ دیا؟",
+  "کیا آج میں نے موت کو یاد کیا؟",
+  "کیا آج میں نے اپنی آخرت کے لیے غور و فکر کیا؟",
+  "کیا آج میں نے اپنی نظریں نیچی رکھیں؟",
+  "کیا آج میں نے سب کے ساتھ خوش اخلاقی سے بات کی؟",
+  "کیا آج میں نے کسی کی مدد کی؟",
+  "کیا آج میری وجہ سے کسی کے چہرے پر مسکراہٹ آئی؟",
 ];
 
-const Checklist = () => {
+const ChecklistUrdu = () => {
   const initialChecklist =
     JSON.parse(localStorage.getItem("checklist")) ||
     Array(tasks.length)
@@ -62,7 +62,7 @@ const Checklist = () => {
             key={taskIndex}
             className="border rounded-lg p-4 bg-green-100 flex flex-col justify-between min-h-[300px]"
           >
-            <h2 className="font-bold text-lg mb-2">{task}</h2>
+            <h2 className="font-bold text-lg mb-2 text-right">{task}</h2>
             <div className="grid grid-cols-5 gap-2">
               {Array.from({ length: 30 }, (_, dayIndex) => (
                 <div key={dayIndex} className="relative">
@@ -110,4 +110,4 @@ const Checklist = () => {
   );
 };
 
-export default Checklist;
+export default ChecklistUrdu;

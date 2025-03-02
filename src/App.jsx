@@ -1,10 +1,10 @@
 import React from "react";
-import Checklist from "./components/CheckList.jsx";
+import MainPage from './components/MainPage.jsx'
 
 function App() {
   return (
     <div className="App">
-      <Checklist />
+      <MainPage />
     </div>
   );
 }
