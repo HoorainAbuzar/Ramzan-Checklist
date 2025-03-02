@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const tasks = [
+const tasksUrdu = [
   "کیا آج میں نے تہجد ادا کی؟",
   "کیا آج میں نے قرآن پاک کی تلاوت کی؟",
   "کیا آج میں نے پانچوں وقت کی نماز ادا کی؟",
