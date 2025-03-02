@@ -196,21 +196,47 @@ const Checklist = () => {
   // Download the PDF
   const downloadPDF = () => {
     const input = document.getElementById("checklist-table");
-    html2canvas(input).then((canvas) => {
+
+    // Temporarily force a large layout for PDF generation (4 columns)
+    const originalClasses = input.className; // Save the original class
+    input.className = "grid grid-cols-4 gap-4"; // Force large screen layout for PDF
+
+    html2canvas(input, { scale: 2 }).then((canvas) => {
       const imgData = canvas.toDataURL("image/png");
-      const pdf = new jsPDF();
-      pdf.addImage(imgData, "PNG", 10, 10, 190, 0); // Adjust dimensions as needed
-      pdf.save("checklist_result.pdf");
+      const pdf = new jsPDF("p", "mm", "a4"); // A4 size portrait
+      const imgWidth = 190; // A4 page width in mm (minus margins)
+      const pageHeight = 297; // A4 page height in mm
+      const imgHeight = (canvas.height * imgWidth) / canvas.width;
+      let heightLeft = imgHeight;
+      let position = 0;
+
+      pdf.addImage(imgData, "PNG", 10, position + 10, imgWidth, imgHeight); // Add the first page
+      heightLeft -= pageHeight;
+
+      // Add more pages if the content is taller than one page
+      while (heightLeft > 0) {
+        position = heightLeft - imgHeight; // Update position
+        pdf.addPage();
+        pdf.addImage(imgData, "PNG", 10, position + 10, imgWidth, imgHeight);
+        heightLeft -= pageHeight;
+      }
+
+      pdf.save("RamzanChecklist by Sumzar.pdf");
+
+      // Restore the original layout after PDF generation
+      input.className = originalClasses; // Restore original class
     });
   };
+
   const toggleLanguage = () => {
     setIsEnglish(!isEnglish); // Toggle between English and Urdu
   };
 
   return (
-    <div>
+    <div className="px-4 ">
+      <h6 className="text-center mt-5">Sumiya</h6>
       {/* Heading */}
-      <h1 className="mt-5 text-2xl font-bold text-center mb-4 text-green-800">
+      <h1 className="text-2xl font-bold text-center mb-4 text-green-800">
         {isEnglish ? "Daily Tasks in Ramadan" : "رمضان چیک لسٹ"}
       </h1>
 
