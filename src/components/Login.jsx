@@ -88,19 +88,21 @@ const Login = () => {
             />
           </div>
 
-          <button
-            type="submit"
-            className="text-white font-medium w-full py-2.5 rounded-full bg-gradient-to-r from-indigo-500 to-indigo-900"
-          >
-            Send
-          </button>
-          <button
-            onClick={() => navigate("/dua")}
-            type="submit"
-            className="text-white font-medium w-full py-2.5 rounded-full bg-gradient-to-r from-indigo-500 to-indigo-900"
-          >
-            Skip
-          </button>
+          <div className="flex gap-3 w-full">
+            <button
+              type="submit"
+              className="text-white font-medium w-1/2 py-2.5 rounded-full bg-gradient-to-r from-indigo-500 to-indigo-900"
+            >
+              Send
+            </button>
+            <button
+              onClick={() => navigate("/dua")}
+              type="submit"
+              className="text-white font-medium w-1/2 py-2.5 rounded-full bg-gradient-to-r from-indigo-500 to-indigo-900"
+            >
+              Skip
+            </button>
+          </div>
         </form>
       </div>
     </div>
