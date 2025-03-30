@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 const Dua = () => {
   const navigate = useNavigate();
   return (
-    <div className="w-[90%] p-8 bg-pink-200 flex flex-col items-center justify-center">
+    <div className="w-[90%] p-8 bg-pink-200 md:h-screen md:w-full flex flex-col items-center justify-center">
       <h2 className="my-3 font-bold bg-pink-500 text-white w-full text-center shadow-lg p-2">
         Muhib e Islam (Islamic Corner){" "}
       </h2>
