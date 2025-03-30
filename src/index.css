@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-h6 {
+h3 {
   font-family: "Mrs Saint Delafield", cursive;
-  font-size: 40px;
+  font-size: 48px;
 }

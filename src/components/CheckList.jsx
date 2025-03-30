@@ -120,7 +120,7 @@ const Checklist = () => {
 
   return (
     <div className="px-4 ">
-      <h6 className="text-center mt-5">Sumiya</h6>
+      <h3 className="text-center mt-5">Sumiya</h3>
       {/* Heading */}
       <h1 className="text-2xl font-bold text-center mb-4 text-green-800">
         {isEnglish ? "Daily Tasks in Ramadan" : "رمضان چیک لسٹ"}
@@ -129,7 +129,7 @@ const Checklist = () => {
       {/* Buttons */}
       <div className="flex justify-center mb-4 space-x-4">
         <button
-          // onClick={downloadPDF}
+          onClick={downloadPDF}
           className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
         >
           {isEnglish ? "Download your result" : "نتائج ڈاؤن لوڈ کریں"}

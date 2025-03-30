@@ -5,12 +5,34 @@ import { useNavigate } from "react-router-dom";
 const Dua = () => {
   const navigate = useNavigate();
   return (
-    <div className="w-[90%] p-8 bg-gradient-to-b h-screen from-green-200 to-green-600 flex flex-col items-center justify-center">
-      <h2 className="my-3 font-bold bg-pink-400 w-full text-center">Muhib e Islam (Islamic Corner) </h2>
-      <img className="shadow-xl md:w-[40%]" src={img} alt="" />
+    <div className="w-[90%] p-8 bg-pink-200 flex flex-col items-center justify-center">
+      <h2 className="my-3 font-bold bg-pink-500 text-white w-full text-center shadow-lg p-2">
+        Muhib e Islam (Islamic Corner){" "}
+      </h2>
+      <p className="py-3 font-bold">
+        السلام علیکم ورحمتہ اللہ وبرکاتہ👀 امید ہے آپ سب بخیر و عافیت سے ہونگے
+        ان شاءاللہ ✨ ایک بہت ضروری بات کرنا چاہتی ہوں جس کے لیے آپ سب کی توجہ
+        کی منتظر ہوں لہٰذا نظرِ توجہ فرمائیے۔۔۔۔ جیسا کہ ہم سب جانتے ہیں کی عید
+        الفطر میں اب کچھ دن ہی باقی ہیں✨ تو میری طرف سے آپ سب کو پہلے سے ہی
+        (ایڈوانس) عید الفطر مبارک ہو اللہ سبحانہ وتعالی آپکے ہر دن کو عید کے دن
+        کی طرح خاص بنائے آمین🤍✨ چند دنوں بعد عید الفطر کا دن ہوگا، ہر طرف خوشی
+        کا ماحول ہوگا ان شاء اللہ 💗 لیکن دیکھیں جو چیز عید کے دن کو مکمل کرتی
+        ہے، وہ ہے عیدی!👀 اب آپ سب سوچ رہے ہونگے کہ میں کیوں اتنی محبت سے عید کی
+        مبارکباد دینے کے ساتھ ساتھ "عیدی" کا ذکر کر رہی ہوں؟ تو اس کا جواب بہت
+        سادہ ہے، ور آپ سب کو بھی اچھی طرح معلوم ہے؛ "عید کی خوشبو کا اصل مزہ تو
+        عیدی کے ساتھ ہی ہے!"🤭 اور عید کے دن خوشیاں دو طریقوں سے بڑھتی ہیں: 1.
+        دل سے دعائیں 💖 2. اور دوسری خوشی جو عیدی سے ملتی ہے😁 تو بس میں آپ سب
+        کو یاد دلانا چاہ رہی ہوں کہ اس عید پر میری خوشیوں میں وہ خاص رنگ شامل
+        کریں جو "عیدی" کا ہے🤭😂 یاد رکھیں، میری دعائیں ہمیشہ آپ کے ساتھ ہیں، تو
+        اس عید پر آپ کی محبت اور عیدی، دونوں کا میرے ساتھ ہونا بھی ضروری
+        ہے🤭💗😂۔۔۔ اور ایک اور پیار بھرا ریمائنڈر (Reminder)📌 ، "عیدی" کے
+        بغیر، عید نامکمل ہے، لہٰذا مجھے بغیر "عیدی" کے کوئی "عید مبارک" کا میسج
+        بھی نا کرے👈🏻👉🏻۔۔۔۔۔۔ منجانب: آپکی پیاری سی ایڈمن😂
+      </p>
+
       <button
         onClick={() => navigate("/checklist")}
-        className="bg-green-900 hover:bg-green-300 hover:text-black transition-all duration-300 w-full rounded py-2 mt-3 text-white"
+        className="bg-pink-500 hover:bg-pink-700 shadow-lg transition-all duration-300 w-full rounded py-2 mt-3 text-white"
       >
         Next
       </button>
